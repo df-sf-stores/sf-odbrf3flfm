@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ConsentBanner, ConsentSettingsButton, Link, PoweredBy, PreviewBanner, ThemeImage, useCart, useMenu, useStorefront, useWishlist } from '@dripfunnel/storefront-core/theme'
+import { ConsentBanner, ConsentSettingsButton, Link, PoweredBy, PreviewBanner, StoreLogo, ThemeImage, useCart, useMenu, useStorefront, useWishlist } from '@dripfunnel/storefront-core/theme'
 import { clsx } from 'clsx'
 import { useCatalog } from './catalog'
 import { Drawer } from './interactive/Drawer'
@@ -222,13 +222,16 @@ export const Layout = ({ children }: { children: ReactNode }) => {
           </Drawer>
 
           <Link href="/" className={styles.brand}>
-            <span className={motion.logo}>
-              <ThemeImage src="logo-monogram.webp" alt="" ratio={263 / 314} sizes="48px" className={styles.logo} />
-            </span>
-            <span className={styles.wordmark}>
-              <span className={styles.wordmarkName}>{store.name}</span>
-              <span className={styles.wordmarkTag}>{t('common.brand.tag')}</span>
-            </span>
+            {store.logo ? (
+              <span className={motion.logo}>
+                <StoreLogo className={styles.logo} />
+              </span>
+            ) : (
+              <span className={styles.wordmark}>
+                <span className={styles.wordmarkName}>{store.name}</span>
+                <span className={styles.wordmarkTag}>{t('common.brand.tag')}</span>
+              </span>
+            )}
           </Link>
 
           <nav className={styles.nav} aria-label={t('common.nav.label')}>
@@ -340,7 +343,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       <footer className={styles.footer}>
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <ThemeImage src="logo-tritiya-gold.webp" alt={store.name} ratio={1} sizes="64px" className={styles.footerLogo} />
+            {store.logo ? <StoreLogo className={styles.footerLogo} /> : <p className={styles.footerName}>{store.name}</p>}
             <p className={styles.note}>{store.tagline ?? t('common.footer.note')}</p>
             {store.contactEmail ? <p className={styles.contact}>{store.contactEmail}</p> : null}
             {store.contactPhone ? <p className={styles.contact}>{store.contactPhone}</p> : null}

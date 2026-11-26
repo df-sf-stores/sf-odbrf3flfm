@@ -2,7 +2,7 @@
 
 import { clsx } from 'clsx'
 import { useEffect, useRef, useState } from 'react'
-import { Link, ThemeImage, useReducedMotion } from '@dripfunnel/storefront-core/theme'
+import { Link, ThemeImage } from '@dripfunnel/storefront-core/theme'
 import { hero as styles } from '../styles/hero'
 
 export type HeroSlide = {
@@ -28,20 +28,22 @@ const interval = 3000
 
 export const HeroCarousel = ({ slides, labels }: { slides: HeroSlide[]; labels: HeroLabels }) => {
   const [index, setIndex] = useState(0)
-  const [hovered, setHovered] = useState(false)
+  // Paused only while a keyboard user is inside it (a mouse click on an arrow or dot doesn't pause it), or by the pause button.
   const [focused, setFocused] = useState(false)
   const [stopped, setStopped] = useState(false)
-  const reduced = useReducedMotion()
   const touchX = useRef<number | null>(null)
+  // Set by a mouse or touch press, so the focus that follows it doesn't count as a keyboard user arriving.
+  const pointer = useRef(false)
   const count = slides.length
-  const playing = !stopped && !reduced && count > 1
+  const playing = !stopped && count > 1
   const go = (next: number) => setIndex(((next % count) + count) % count)
 
+  // A fresh 3 s for every slide, so a slide picked by hand also gets its full time before the next one.
   useEffect(() => {
-    if (!playing || hovered || focused) return
-    const timer = setInterval(() => setIndex((i) => (i + 1) % count), interval)
-    return () => clearInterval(timer)
-  }, [playing, hovered, focused, count])
+    if (!playing || focused) return
+    const timer = setTimeout(() => setIndex((i) => (i + 1) % count), interval)
+    return () => clearTimeout(timer)
+  }, [playing, focused, count, index])
 
   return (
     <section
@@ -49,13 +51,13 @@ export const HeroCarousel = ({ slides, labels }: { slides: HeroSlide[]; labels: 
       role="region"
       aria-roledescription="carousel"
       aria-label={labels.region}
-      onPointerEnter={(e) => {
-        if (e.pointerType === 'mouse') setHovered(true)
+      onPointerDown={() => {
+        pointer.current = true
       }}
-      onPointerLeave={(e) => {
-        if (e.pointerType === 'mouse') setHovered(false)
+      onFocus={() => {
+        setFocused(!pointer.current)
+        pointer.current = false
       }}
-      onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') go(index + 1)
@@ -72,7 +74,7 @@ export const HeroCarousel = ({ slides, labels }: { slides: HeroSlide[]; labels: 
         go(end < start ? index + 1 : index - 1)
       }}
     >
-      <div className={styles.track} aria-live={playing && !hovered && !focused ? 'off' : 'polite'}>
+      <div className={styles.track} aria-live={playing && !focused ? 'off' : 'polite'}>
         {slides.map((s, i) => {
           const on = i === index
           const words = (
@@ -124,13 +126,11 @@ export const HeroCarousel = ({ slides, labels }: { slides: HeroSlide[]; labels: 
               <path d="M9 5l7 7-7 7" />
             </svg>
           </button>
-          {reduced ? null : (
-            <button type="button" className={styles.arrow} onClick={() => setStopped(!stopped)} aria-label={stopped ? labels.play : labels.pause}>
-              <svg className={styles.arrowIcon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d={stopped ? 'M8 5.5v13l10-6.5z' : 'M9 6v12M15 6v12'} />
-              </svg>
-            </button>
-          )}
+          <button type="button" className={styles.arrow} onClick={() => setStopped(!stopped)} aria-label={stopped ? labels.play : labels.pause}>
+            <svg className={styles.arrowIcon} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d={stopped ? 'M8 5.5v13l10-6.5z' : 'M9 6v12M15 6v12'} />
+            </svg>
+          </button>
         </div>
       ) : null}
     </section>

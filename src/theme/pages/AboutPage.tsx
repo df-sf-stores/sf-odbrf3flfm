@@ -8,7 +8,7 @@ import motion from '../styles/motion.module.css'
 
 export const AboutPage = () => {
   const { store, t } = useStorefront()
-  useHead({ title: t('pages.about.seoTitle', { name: store.name }), description: t('pages.about.seoDescription', { name: store.name }) })
+  useHead({ title: t('pages.about.seoTitle', { name: store.name }), description: store.description ?? t('pages.about.seoDescription') })
   return (
     <Layout>
       <section className={styles.intro}>
@@ -18,7 +18,7 @@ export const AboutPage = () => {
             {t('pages.about.title')} <em className={styles.em}>{t('pages.about.accent')}</em>
           </h1>
           <Ornament className={styles.ornament} />
-          <p className={styles.lead}>{t('pages.about.first', { name: store.name })}</p>
+          <p className={styles.lead}>{t('pages.about.first')}</p>
           <p className={styles.body}>{t('pages.about.second')}</p>
         </div>
         <div className={styles.introPicture}>

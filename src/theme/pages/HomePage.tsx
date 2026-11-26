@@ -276,7 +276,7 @@ export const HomePage = () => {
             {t('home.story.title')} <em className={styles.em}>{t('home.story.accent')}</em>
           </h2>
           <Ornament className={styles.ornament} />
-          <p className={styles.storyBody}>{t('home.story.body', { name: store.name })}</p>
+          <p className={styles.storyBody}>{t('home.story.body')}</p>
           <ul className={styles.pillars}>
             <li className={styles.pillar}>
               <p className={styles.pillarTitle}>{t('home.story.pillarOne')}</p>

@@ -6,7 +6,7 @@ import { about as styles } from '../components/styles/about'
 
 export const ContactPage = () => {
   const { store, t } = useStorefront()
-  useHead({ title: t('pages.contact.seoTitle', { name: store.name }), description: t('pages.contact.seoDescription', { name: store.name }) })
+  useHead({ title: t('pages.contact.seoTitle', { name: store.name }), description: t('pages.contact.seoDescription') })
   const place = [store.address?.street, store.address?.city, store.address?.region, store.address?.postal].filter(Boolean).join(', ')
   return (
     <Layout>
