@@ -1,11 +1,55 @@
 {
+  "brand": {
+    "tag": "Fine jewellery"
+  },
+  "announce": {
+    "label": "Store announcements",
+    "first": "Free shipping across India",
+    "second": "BIS hallmarked gold",
+    "third": "Easy returns"
+  },
   "nav": {
     "label": "Main",
     "menu": "Menu",
+    "close": "Close menu",
     "submenu": "Submenu: {item}",
     "shop": "Shop",
-    "about": "About",
-    "contact": "Contact"
+    "newIn": "New in",
+    "about": "Our story",
+    "contact": "Contact",
+    "categories": "Shop by category",
+    "occasions": "Shop by occasion",
+    "edits": "Shop by metal",
+    "featureBridal": "The bridal edit",
+    "featureBridalAlt": "A bride in a red lehenga wearing a gold kundan necklace, maang tikka and nath",
+    "featureDaily": "Everyday gold",
+    "featureDailyAlt": "A wrist wearing slim stacked gold bracelets against a white shirt"
+  },
+  "categories": {
+    "rings": "Rings",
+    "earrings": "Earrings",
+    "necklaces": "Necklaces",
+    "bangles": "Bangles",
+    "chains": "Chains",
+    "pendants": "Pendants",
+    "mangalsutra": "Mangalsutra"
+  },
+  "occasions": {
+    "wedding": "Wedding",
+    "weddingLine": "Heirloom sets for the biggest day",
+    "daily": "Daily wear",
+    "dailyLine": "Light gold you will never take off",
+    "festive": "Festive",
+    "festiveLine": "Statement pieces for every celebration",
+    "gifting": "Gifting",
+    "giftingLine": "Thoughtful gold for the people you love"
+  },
+  "edits": {
+    "gold": "Gold",
+    "diamond": "Diamond",
+    "silver": "Silver",
+    "latest": "Latest collections",
+    "all": "Shop all"
   },
   "tools": {
     "search": "Search",
@@ -16,15 +60,28 @@
     "cartCount": "Cart, {count, plural, one {# item} other {# items}}"
   },
   "footer": {
-    "note": "Thank you for shopping with us.",
+    "note": "Fine gold jewellery, made to be worn every day and kept for generations.",
     "shop": "Shop",
     "all": "Shop all",
     "help": "Help",
+    "track": "Track your order",
     "shipping": "Shipping",
     "returns": "Returns",
     "privacy": "Privacy",
     "terms": "Terms",
     "legal": "Legal",
-    "notice": "Legal notice"
+    "notice": "Legal notice",
+    "joinTitle": "Join the inner circle",
+    "joinBody": "Create a free account to keep a wishlist, follow every order and check out faster.",
+    "joinAction": "Create an account",
+    "pay": "We accept",
+    "payUpi": "UPI",
+    "payVisa": "VISA",
+    "payMastercard": "Mastercard",
+    "payRupay": "RuPay",
+    "copyright": "© 2026 {name}. All rights reserved.",
+    "poweredBy": "Powered by",
+    "poweredUrl": "https://www.dripfunnel.com/in/",
+    "poweredLogo": "DripFunnel"
   }
 }

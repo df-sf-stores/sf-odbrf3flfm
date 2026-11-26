@@ -1,35 +1,52 @@
 @theme {
-  --color-bg: #fbf8f2;
-  --color-surface: #fffdf9;
-  --color-soft: #f4eee3;
-  --color-tint: #ece3d3;
-  --color-ink: #2b2219;
-  --color-ink-soft: #4d4135;
-  --color-muted: #6f6253;
-  --color-line: #e4d9c7;
-  --color-accent: #2b2219;
-  --color-accent-ink: #fbf8f2;
-  --color-gold: #b48e55;
-  --color-gold-ink: #7a5a22;
+  /* Fonts core loads from Google Fonts: an engraved serif for headings, a clean sans for reading. */
+  --google-fonts: 'Cormorant Garamond', 'Inter';
+
+  /* Tritya palette: ivory ground, maroon accent, burnished gold, charcoal text (every text pair AA). */
+  --color-bg: #fbf7f0;
+  --color-surface: #fffdf8;
+  --color-soft: #f5ede0;
+  --color-tint: #efe3cf;
+  --color-ink: #2b2b2b;
+  --color-ink-soft: #4a4440;
+  --color-muted: #6b625a;
+  --color-line: #e8dcc8;
+  --color-accent: #6e1a2b;
+  --color-accent-ink: #fbf7f0;
+  --color-maroon: #6e1a2b;
+  --color-maroon-deep: #3d0f19;
+  --color-emerald: #1f4d3f;
+  --color-gold: #b8892d;
+  --color-gold-soft: #e9d7ad;
+  --color-gold-ink: #7a5a1e;
   --color-danger: #9a3412;
   --color-focus: #00519f;
-  --radius-card: 0;
-  --radius-button: 0;
-  --font-heading: 'Cormorant Garamond', 'Hoefler Text', 'Baskerville', 'Baskerville Old Face', 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', serif;
-  --heading-weight: 400;
-  --brand-weight: 500;
+
+  --radius-card: 16px;
+  --radius-button: 999px;
+  --radius-tile: 20px;
+
+  --shadow-soft: 0 18px 40px -24px rgb(61 15 25 / 0.35);
+  --shadow-lift: 0 24px 48px -22px rgb(61 15 25 / 0.42);
+
+  --font-heading: 'Cormorant Garamond', 'Hoefler Text', 'Baskerville', 'Palatino Linotype', 'Book Antiqua', 'Noto Serif', serif;
+  --heading-weight: 500;
+  --brand-weight: 600;
   --heading-case: none;
-  --heading-spacing: 0.01em;
-  --font-body: 'Jost', 'Avenir Next', 'Avenir', 'Segoe UI', roboto, 'Helvetica Neue', sans-serif;
-  --color-header-bg: #fbf8f2;
-  --color-header-ink: #2b2219;
-  --color-header-hover: #f4eee3;
-  --color-footer-bg: #f4eee3;
-  --color-footer-ink: #2b2219;
-  --color-footer-muted: #645747;
-  --color-footer-line: #d9c9ac;
-  --picture: linear-gradient(160deg, #efe4d0, #d6c09a);
-  --picture-alt: linear-gradient(160deg, #f4eee3, #e6d8c0);
+  --heading-spacing: 0.005em;
+  --font-body: 'Inter', 'Segoe UI', roboto, 'Helvetica Neue', sans-serif;
+
+  --color-header-bg: #fbf7f0;
+  --color-header-ink: #2b2b2b;
+  --color-header-hover: #f5ede0;
+  --color-footer-bg: #3d0f19;
+  --color-footer-ink: #fbf7f0;
+  --color-footer-muted: #dccbb3;
+  --color-footer-line: #6a3a43;
+
+  --picture: linear-gradient(160deg, #f3e6cf, #dcc395);
+  --picture-alt: linear-gradient(160deg, #f5ede0, #e8d8bc);
+
   --animate-shimmer: shimmer 1.6s linear infinite;
 }
 

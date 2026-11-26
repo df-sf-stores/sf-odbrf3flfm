@@ -1,0 +1,87 @@
+/*
+ * Scroll-driven motion, all in CSS so nothing runs on the main thread. Where a browser lacks scroll timelines the
+ * elements simply show at rest, and core's reduced-motion layer ends every animation at once.
+ */
+
+.reveal {
+  animation-fill-mode: both;
+}
+
+.header {
+  animation-fill-mode: both;
+}
+
+.logo {
+  display: inline-flex;
+  transform-origin: left center;
+}
+
+.bar {
+  padding-block: 12px;
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 28%;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .header {
+    animation: header-settle linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 160px;
+  }
+
+  .logo {
+    animation: logo-shrink linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 160px;
+  }
+
+  .bar {
+    animation: bar-tighten linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 160px;
+  }
+}
+
+@keyframes bar-tighten {
+  from {
+    padding-block: 12px;
+  }
+  to {
+    padding-block: 4px;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes header-settle {
+  from {
+    box-shadow: 0 0 0 rgb(61 15 25 / 0);
+  }
+  to {
+    box-shadow: 0 10px 30px -18px rgb(61 15 25 / 0.35);
+  }
+}
+
+@keyframes logo-shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.82);
+  }
+}

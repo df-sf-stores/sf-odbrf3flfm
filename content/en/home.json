@@ -1,53 +1,140 @@
 {
+  "seo": {
+    "description": "Fine gold jewellery for weddings, festivals and every day: rings, earrings, necklaces, bangles, chains, pendants and mangalsutras, delivered across India."
+  },
   "hero": {
-    "eyebrow": "Jewellery",
-    "title": "Find your",
-    "accent": "next piece",
-    "lead": "Every piece in the shop, in one place.",
-    "action": "Discover the collection",
-    "altLeft": "A woman wearing a gold choker with pearls and a matching earring",
-    "altRight": "A raised hand wearing stacked gold rings and a chain bracelet"
+    "region": "Featured collections",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "pause": "Pause the slideshow",
+    "play": "Play the slideshow",
+    "choose": "Choose a slide",
+    "position": "Slide {n} of {total}",
+    "bridal": {
+      "eyebrow": "The bridal edit",
+      "title": "Gold for the day",
+      "accent": "you'll always remember",
+      "body": "Kundan chokers, temple necklaces and statement sets, made to be worn at the mandap and handed down for generations.",
+      "action": "Explore bridal",
+      "alt": "A bride in a red dupatta wearing a heavy gold necklace, maang tikka, jhumkas and a nath"
+    },
+    "daily": {
+      "eyebrow": "Everyday gold",
+      "title": "Light enough",
+      "accent": "to never take off",
+      "body": "Fine chains, slim rings and delicate pendants that move from the office to dinner without a second thought.",
+      "action": "Shop daily wear",
+      "alt": "A woman in a black top wearing a fine gold pendant necklace and a gold ring"
+    },
+    "festive": {
+      "eyebrow": "Festive and gifting",
+      "title": "Light up",
+      "accent": "every celebration",
+      "body": "From Diwali to Akshaya Tritiya, find pieces worth gifting, and worth keeping for yourself.",
+      "action": "Shop festive edit",
+      "alt": "Lit clay diyas on a brass thali surrounded by marigolds and rose petals"
+    }
   },
-  "assure": {
-    "label": "Shopping with us",
-    "secure": "Secure checkout",
-    "track": "Follow every order from your account",
-    "save": "Save pieces to your wishlist"
+  "categories": {
+    "eyebrow": "Find your piece",
+    "title": "Shop by category"
   },
-  "collections": {
-    "eyebrow": "The collections",
-    "title": "Shop by collection",
-    "all": "Shop all"
+  "trust": {
+    "label": "Why shop with us",
+    "hallmark": "BIS hallmarked",
+    "hallmarkText": "Every gold piece carries its HUID hallmark",
+    "purity": "Certified purity",
+    "purityText": "Karatage stated clearly on every piece",
+    "returns": "Easy returns",
+    "returnsText": "Changed your mind? We make it simple",
+    "secure": "Secure payments",
+    "secureText": "UPI, cards and net banking, all encrypted",
+    "shipping": "Free shipping",
+    "shippingText": "Insured delivery to your door"
+  },
+  "occasions": {
+    "eyebrow": "Curated for you",
+    "title": "Shop by",
+    "accent": "occasion",
+    "explore": "Explore"
+  },
+  "edits": {
+    "eyebrow": "Our collections",
+    "title": "Explore the",
+    "accent": "edits",
+    "goldAlt": "Explore our gold collection: a gold necklace, jhumkas, a bangle and a ring on brown velvet",
+    "diamondAlt": "Explore our diamond collection: a diamond ring, tennis bracelet and drop earrings on navy velvet",
+    "silverAlt": "Explore our silver collection: a silver pendant, earrings, bracelet and ring on blue satin",
+    "latestAlt": "Shop our latest collections: a diamond necklace, earrings and bangles on plum velvet",
+    "allAlt": "Shop all: rings and pendants displayed on black velvet with gold ribbon"
   },
   "newest": {
     "eyebrow": "Just arrived",
-    "title": "New in",
+    "title": "New",
+    "accent": "arrivals",
     "all": "View all new pieces"
+  },
+  "prices": {
+    "eyebrow": "Something for every budget",
+    "title": "Shop by",
+    "accent": "price",
+    "lead": "Start with a budget and we'll show you every piece inside it.",
+    "tierOne": "Tier one",
+    "oneName": "Everyday treasures",
+    "oneLine": "Studs, slim rings and fine chains",
+    "tierTwo": "Tier two",
+    "twoName": "Thoughtful gifts",
+    "twoLine": "Pendants, huggies and charm bracelets",
+    "tierThree": "Tier three",
+    "threeName": "Occasion pieces",
+    "threeLine": "Jhumkas, bangles and layered chains",
+    "tierFour": "Tier four",
+    "fourName": "Heirloom gold",
+    "fourLine": "Bridal sets, chokers and statement necklaces"
   },
   "story": {
     "eyebrow": "Our story",
-    "title": "The story behind",
-    "accent": "every piece",
-    "body": "Tell shoppers about your metals and stones, how each piece is finished and polished, and how to care for it so it lasts.",
+    "title": "Gold that grows",
+    "accent": "more precious",
+    "body": "{name} takes its name from Akshaya Tritiya, the day families across India have long chosen to buy gold, because what is bought then is said never to diminish. We design every piece in that spirit: honest gold, clearly hallmarked, finished by hand and made to be worn often, then passed on.",
     "more": "Read our story",
-    "alt": "A hand lifting a long gold chain with mother-of-pearl charms"
+    "alt": "A smiling woman wearing a kundan necklace, large gold earrings and a maang tikka",
+    "pillarOne": "Hallmarked",
+    "pillarOneText": "Purity you can verify, piece by piece",
+    "pillarTwo": "Handfinished",
+    "pillarTwoText": "Polished and checked by craftspeople",
+    "pillarThree": "Heirloom-made",
+    "pillarThreeText": "Built to be worn now, and kept for later"
   },
-  "gift": {
-    "eyebrow": "By price",
-    "title": "Start with",
-    "accent": "our lowest prices",
-    "body": "Browse every piece, lowest price first.",
-    "action": "Shop by price",
-    "alt": "Two gold rings set with small stones resting on a white block in warm light"
+  "stories": {
+    "eyebrow": "In your words",
+    "title": "Customer",
+    "accent": "stories",
+    "invite": "A wedding set worn by three generations, a first chain bought with a first salary: every piece carries a story. Tell us yours, and with your permission we'll share it here.",
+    "action": "Share your story"
   },
-  "picks": {
-    "eyebrow": "Keep browsing",
-    "title": "More pieces to love",
-    "all": "Shop all"
+  "gallery": {
+    "eyebrow": "Worn and loved",
+    "title": "Follow the",
+    "accent": "sparkle",
+    "follow": "Follow us",
+    "open": "See more pieces",
+    "bridalKundan": "A bride in a pink lehenga wearing a kundan choker, nath and maang tikka",
+    "bridalPortrait": "A smiling bride wearing a gold maang tikka, jhumkas and a layered necklace",
+    "chainBracelets": "Fine gold chains and twisted gold bangles on a white surface",
+    "stackedRings": "Three stacked gold rings set with diamonds",
+    "roseEarrings": "A pair of rose gold drop earrings on white silk",
+    "templeBangles": "Two temple-style gold bangles set with rubies on dark velvet"
   },
-  "signup": {
+  "circle": {
+    "eyebrow": "The inner circle",
     "title": "Keep your favourites close",
-    "body": "Create an account to save favourites, follow your orders and check out faster.",
-    "action": "Create an account"
+    "body": "Create a free account and everything you love stays in one place, on every device.",
+    "perkOne": "Save pieces to your wishlist",
+    "perkTwo": "Follow every order from your account",
+    "perkThree": "Check out faster with saved addresses",
+    "action": "Create an account",
+    "signIn": "Sign in",
+    "alt": "A raised hand wearing stacked gold rings and a fine chain bracelet"
   }
 }
